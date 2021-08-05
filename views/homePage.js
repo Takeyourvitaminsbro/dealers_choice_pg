@@ -1,6 +1,6 @@
 
 
-module.exports = (posts) => `<!DOCTYPE html>
+module.exports = (characters) => `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,12 +10,16 @@ module.exports = (posts) => `<!DOCTYPE html>
     <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-    <h1>
-    THIS IS THE HOMEPAGE
-    </h1>
-    ${posts.map(post => `
+    <h2>
+    Main Harry Potter Characters:
+    </h2>
+    <div>
+        <h3>List Characters:</h3>
+        <button><a href ='/half-bloods'>Half-bloods</a></button>
+    </div>
+    ${characters.map(character => `
     <ul>
-        <li> ${post.name}
-    </ul>`)}
+        <li><a href="/characters/${character.id}"> ${character.name} </a></li>
+    </ul>`).join('')}
 </body>
 </html>`

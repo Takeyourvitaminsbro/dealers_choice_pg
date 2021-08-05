@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS mytable; 
 CREATE TABLE mytable(
    id       INTEGER  NOT NULL PRIMARY KEY 
   ,name     VARCHAR(28) NOT NULL
